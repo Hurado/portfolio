@@ -4,6 +4,9 @@ import SF from '../../assets/studio-figura.png'
 import IBPM from '../../assets/IBPM.png'
 import OSKAR from '../../assets/OSKAR.png'
 import LaboPrint from '../../assets/LaboPrint.png'
+import LinkedinIcon from '../../assets/linkedin.png'
+import GithubIcon from '../../assets/Github1.png'
+
 
 
 const Contact = () => {
@@ -22,7 +25,18 @@ const Contact = () => {
             </div>
         </div>
         <div id="contact">
-           
+            <h1 className="contactPageTitle">Contact me</h1>
+            <span className="contactDesc">Please fill out the form below to discuss any work opportunities.</span>
+            <form action="" className="contactForm">
+                <input type="text" className="name" placeholder='Your Name' />
+                <input type="email" className="email" placeholder='Your Email' />
+                <textarea className='msg' name="message" rows="5" placeholder='Your Message'></textarea>
+                <button type='submit' value= 'Send' className="submitBtn">Submit</button>
+                <div className="links">
+                    <img src={LinkedinIcon} alt="Linkedin Icon" className="link" />
+                    <img src={GithubIcon} alt="Github Icon" className="link" />
+                </div>
+            </form>
         </div>
     </section>
   )
