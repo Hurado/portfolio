@@ -5,7 +5,7 @@ import IBPM from '../../assets/IBPM.png'
 import OSKAR from '../../assets/OSKAR.png'
 import LaboPrint from '../../assets/LaboPrint.png'
 import LinkedinIcon from '../../assets/linkedin.png'
-import GithubIcon from '../../assets/Github1.png'
+import GithubIcon from '../../assets/github.png'
 
 
 
