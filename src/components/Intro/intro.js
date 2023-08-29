@@ -13,7 +13,7 @@ const Intro = () => {
       <span className="hello">Hello,</span>
       <span className="introText">I'm <span className="introName">Arek</span> <br/> Website Designer</span>
       <p className="introPara">I am a skilled web designer with experience in creating visually <br />appealing and user friendly websites. </p>
-      <Link><button className="btn" onClick={() => {
+      <Link to=''><button className="btn" onClick={() => {
                 document.getElementById('contact').scrollIntoView({behavior:'smooth'});
             }}><img src={btnImg} alt="Hire" className='btnImg' />Let's meet! </button></Link>
       </div>

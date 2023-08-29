@@ -7,9 +7,18 @@ import menu from '../../assets/menu.png'
 
 const Navbar = () => {
     const [showMenu, setShowMenu] = useState(false)
+
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      };
   return (
-        <nav className="navbar">
-            <img src={logo} alt="logo" className='logo' />
+        <nav className="navbar" id = 'navbarTop'>
+           <button onClick={scrollToTop}>
+            <img src={logo} alt="navbar" className='logo'  />
+            </button>
             <div className="desktopMenu">
                 <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration = {500} className='desktopMenuListItem'>Home</Link>
                 <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration = {500} className='desktopMenuListItem'>About</Link>
