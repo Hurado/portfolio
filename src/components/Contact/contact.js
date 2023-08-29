@@ -62,8 +62,8 @@ const Contact = () => {
                 <button type='submit' value= 'Send' className="submitBtn">Submit</button>
                 {errorMessage && <p className='error'>{errorMessage}</p>}
                 <div className="links">
-                    <img src={LinkedinIcon} alt="Linkedin Icon" className="link" />
-                    <img src={GithubIcon} alt="Github Icon" className="link" />
+                   <a href='https://www.linkedin.com/in/arkadiusz-piaszczy%C5%84ski-a2b81019b/' target='_blank' rel="noreferrer"><img src={LinkedinIcon} alt="Linkedin Icon" className="link" /></a>
+                   <a href="https://github.com/Hurado" target='_blank' rel="noreferrer"> <img src={GithubIcon} alt="Github Icon" className="link" /></a>
                 </div>
             </form>
         </div>
