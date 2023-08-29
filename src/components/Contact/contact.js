@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import './contact.css'
 import SF from '../../assets/studio-figura.png'
 import IBPM from '../../assets/IBPM.png'
@@ -10,13 +10,28 @@ import emailjs from '@emailjs/browser';
 
 
 const Contact = () => {
+
+
     const form = useRef();
+    const [errorMessage, setErrorMessage] = useState('');
+
     const sendEmail = (e) => {
         e.preventDefault();
+
+        const nameInput = form.current.querySelector('.name');
+        const emailINput = form.current.querySelector('.email');
+        const msgTextArea = form.current.querySelector('.msg');
+
+        if(nameInput.value.trim() === '' || emailINput.value.trim() === '' || msgTextArea.value.trim() === '') {
+            setErrorMessage('Please fill out all fields.');
+            return;
+        }
+
+        setErrorMessage('');
     
         emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
           .then((result) => {
-              console.log(result.text);
+            //   console.log(result.text);
               e.target.reset();
               alert('Email sent!')
           }, (error) => {
@@ -45,6 +60,7 @@ const Contact = () => {
                 <input type="email" className="email" placeholder='Your Email' name='your_email' />
                 <textarea className='msg' name="message" rows="5" placeholder='Your Message'></textarea>
                 <button type='submit' value= 'Send' className="submitBtn">Submit</button>
+                {errorMessage && <p className='error'>{errorMessage}</p>}
                 <div className="links">
                     <img src={LinkedinIcon} alt="Linkedin Icon" className="link" />
                     <img src={GithubIcon} alt="Github Icon" className="link" />
