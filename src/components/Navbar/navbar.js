@@ -16,9 +16,8 @@ const Navbar = () => {
       };
   return (
         <nav className="navbar" id = 'navbarTop'>
-           <button onClick={scrollToTop}>
-            <img src={logo} alt="navbar" className='logo'  />
-            </button>
+            <img src={logo} alt="navbar" className='logo' onClick={scrollToTop} />
+
             <div className="desktopMenu">
                 <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration = {500} className='desktopMenuListItem'>Home</Link>
                 <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration = {500} className='desktopMenuListItem'>About</Link>
