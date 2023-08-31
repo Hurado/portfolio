@@ -1,9 +1,7 @@
 import React from 'react'
 import { VerticalTimeline,VerticalTimelineElement } from 'react-vertical-timeline-component'
 import 'react-vertical-timeline-component/style.min.css';
-import {styles} from '../styles';
-import { SectionWrapper } from '../hoc';
-import { studiofigura, IBPM, OSKAR, LaboPrint } from '../../assets/company'
+import {styles} from './styles';
 import { experiences } from "../../constants/json.js";
 
 
@@ -48,4 +46,4 @@ const Experience = () => {
   )
 }
 
-export default SectionWrapper(Experience,"work")
+export default Experience
