@@ -1,54 +1,15 @@
 import React, { useRef, useState } from "react";
 import "./contact.css";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import { studiofigura, IBPM, OSKAR, LaboPrint } from '../../assets/company'
+import SF from '../../assets/company/studio-figura.png'
+import IBPM from '../../assets/company/IBPM.png'
+import OSKAR from '../../assets/company/OSKAR.png'
+import LaboPrint from '../../assets/company/LaboPrint.png'
 import LinkedinIcon from "../../assets/linkedin.png";
 import GithubIcon from "../../assets/github.png";
 import emailjs from "@emailjs/browser";
-import { experiences } from "../../constants/json.js";
+
 
 const Contact = () => {
-  <VerticalTimelineElement
-    contentStyle={{ background: "#1d1836", color: "#fff" }}
-    contentArrowStyle={{ borderRight: "7px solid #232631" }}
-    date="August 2021 - November 2021"
-    iconStyle={{ background: "#383E56" }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={studiofigura}
-          alt="Studio Figura"
-          className="w-[60%] h-[60] object-contain"
-        />
-      </div>
-    }
-  >
-    <div>
-      <h3 className="text-white text-[24px] font-bold">
-        {"Intern in the IT Department"}
-      </h3>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        "Studio Figura International "
-      </p>
-    </div>
-
-    <ul className="mt-5 list-disc ml-5 space-y-2">
-      {(point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className="text-white-100 text-[14px] pl-1 tracking-wider"
-        >
-          {point}
-        </li>
-      )}
-    </ul>
-  </VerticalTimelineElement>;
   const form = useRef();
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -97,11 +58,14 @@ const Contact = () => {
           Some of the notable companies I have worked with includes
         </p>
         <div className="clientImgs">
-          <VerticalTimeline>
-            {experiences.map((experience, index) => (
-              <Contact key={index} experience={experience} />
-            ))}
-          </VerticalTimeline>
+          <img
+            src={SF}
+            alt="studio Figura International"
+            className="clientImg"
+          />
+          <img src={IBPM} alt="IBPM" className="clientImg" />
+          <img src={OSKAR} alt="OSKAR" className="clientImg" />
+          <img src={LaboPrint} alt="LaboPrint" className="clientImg" />
         </div>
       </div>
       <div id="contact">
