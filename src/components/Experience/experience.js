@@ -40,8 +40,8 @@ const ExperienceCard = ({experience}) => (
 const Experience = () => {
   return (
     <>
-      <p className={styles.sectionSubText}>What i have done so far?</p>
-        <h2 className={styles.sectionHeadText}>Work Experience.</h2>
+      <p className="subTitle">What i have done so far?</p>
+        <h2 className='header-exp'>Work Experience.</h2>
       <div className='section-wrapper'>
         <VerticalTimeline>
           {experiences.map((experience, index) => (
